@@ -41,7 +41,8 @@ jobs:
 
     - name: Restart docker
       run: |
-        ls -a
+        pwd
+        ls / -a
         sudo service docker restart
 
     - name: Free up disk space complete
