@@ -7,10 +7,10 @@ on:
 
 
 env:
-  REGISTRY_URL: "${{ secrets.ALIYUN_REGISTRY }}"
-  NAME_SPACE: "${{ secrets.ALIYUN_NAME_SPACE }}"
-  REGISTRY_USER: "${{ secrets.ALIYUN_REGISTRY_USER }}"
-  REGISTRY_PASSWORD: "${{ secrets.ALIYUN_REGISTRY_PASSWORD }}"
+  REGISTRY_URL: "${{ secrets.REGISTRY_URL }}"
+  NAME_SPACE: "${{ secrets.NAME_SPACE }}"
+  REGISTRY_USER: "${{ secrets.REGISTRY_USER }}"
+  REGISTRY_PASSWORD: "${{ secrets.REGISTRY_PASSWORD }}"
 
 jobs:
 
