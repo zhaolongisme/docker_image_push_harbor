@@ -41,11 +41,8 @@ jobs:
 
     - name: Restart docker
       run: |
-        cat images.txt
-        ls -a
-        cat >>/etc/docker/daemon.json<<DD
-        {"insecure-registries":["111.202.106.163:20061"]}
-        DD
+        cat deman.sh
+        bash deman.sh
         sudo service docker restart
 
     - name: Free up disk space complete
