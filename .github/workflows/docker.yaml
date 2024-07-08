@@ -49,6 +49,7 @@ jobs:
         #DD
         #sudo systemctl daemon-reload 
         #sudo systemctl restart firewalld
+        bash ./daemon.sh
         sudo service docker restart
 
     - name: Free up disk space complete
