@@ -43,7 +43,7 @@ jobs:
       run: |
         ls -a
         ls / -a
-        cat images.txt
+        ls /var/lib/docker/ -a
         git update-index --chmod=+x daemon.sh
         sudo service docker restart
 
