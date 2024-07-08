@@ -41,12 +41,12 @@ jobs:
 
     - name: Restart docker
       run: |
-        sudo mkdir -p /etc/docker
-        sudo chmod +x /etc/docker
-        sudo touch /etc/docker/daemon.json
-        sudo cat >>/etc/docker/daemon.json<<DD
-        {"insecure-registries":["111.202.106.163:20061"]}
-        DD
+        #sudo mkdir -p /etc/docker
+        #sudo chmod +x /etc/docker
+        #sudo touch /etc/docker/daemon.json
+        #sudo cat >>/etc/docker/daemon.json<<DD
+        #{"insecure-registries":["111.202.106.163:20061"]}
+        #DD
         #sudo systemctl daemon-reload 
         #sudo systemctl restart firewalld
         sudo service docker restart
