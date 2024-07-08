@@ -41,7 +41,6 @@ jobs:
 
     - name: Restart docker
       run: |
-        cat /doc/daemon.sh
         ls -a
         sudo service docker restart
 
