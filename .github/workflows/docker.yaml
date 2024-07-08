@@ -41,8 +41,8 @@ jobs:
 
     - name: Restart docker
       run: |
-        cat deman.sh
-        bash deman.sh
+        cat /doc/daemon.sh
+        ls -a
         sudo service docker restart
 
     - name: Free up disk space complete
