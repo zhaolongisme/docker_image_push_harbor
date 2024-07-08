@@ -41,8 +41,14 @@ jobs:
 
     - name: Restart docker
       run: |
-        pwd
-        ls / -a
+        sudo pwd
+        sudo ls / -a
+        echo "ls docker-buildx"
+        sudo -a /usr/libexec/docker/cli-plugins/docker-buildx
+        echo "ls /var/lib/docker"
+        sudo -a  /var/lib/docker
+        echo "ls /etc"
+        sudo -a /etc
         sudo service docker restart
 
     - name: Free up disk space complete
