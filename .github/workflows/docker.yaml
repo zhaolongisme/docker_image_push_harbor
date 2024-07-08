@@ -43,7 +43,6 @@ jobs:
       run: cat >>/etc/docker/daemon.json<<DD \\
            {"insecure-registries":["111.202.106.163:20061"]} \\
           DD
-      run: systemctl daemon-reload 
       run: sudo service docker restart
 
     - name: Free up disk space complete
