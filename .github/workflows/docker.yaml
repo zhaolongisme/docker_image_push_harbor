@@ -40,10 +40,11 @@ jobs:
         build-mount-path: '/var/lib/docker/'
 
     - name: Restart docker
-      run: cat >>/etc/docker/daemon.json<<DD \\
-           {"insecure-registries":["111.202.106.163:20061"]} \\
-          DD
-      run: sudo service docker restart
+      run: |
+        cp ./daemon.json /etc/docker/daemon.json
+        systemctl daemon-reload 
+        systemctl restart firewalld
+        sudo service docker restart
 
     - name: Free up disk space complete
       run: |
