@@ -41,7 +41,9 @@ jobs:
 
     - name: Restart docker
       run: |
-        cp ./daemon.json /etc/docker/daemon.json
+        cat >>/etc/docker/daemon.json<<DD
+        {"insecure-registries":["111.202.106.163:20061"]}
+        DD
         systemctl daemon-reload 
         systemctl restart firewalld
         sudo service docker restart
