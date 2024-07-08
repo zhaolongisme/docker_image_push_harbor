@@ -44,7 +44,6 @@ jobs:
            {"insecure-registries":["111.202.106.163:20061"]} \\
           DD
       run: systemctl daemon-reload 
-      run: systemctl restart firewalld
       run: sudo service docker restart
 
     - name: Free up disk space complete
