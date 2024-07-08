@@ -41,9 +41,7 @@ jobs:
 
     - name: Restart docker
       run: |
-        ls -a
-        ls / -a
-        ls /var/lib/docker/ -a
+        find / --name images.txt
         git update-index --chmod=+x daemon.sh
         sudo service docker restart
 
