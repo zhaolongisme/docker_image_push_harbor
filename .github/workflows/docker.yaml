@@ -140,11 +140,11 @@ jobs:
             # 将@sha256:等字符删除
             image_name_tag="${image_name_tag%%@*}"
             #new_image="$REGISTRY_URL/$NAME_SPACE/$platform_prefix$name_space_prefix$image_name_tag"
-            #new_image="$REGISTRY_URL/$NAME_SPACE/$platform_prefix$image_name_tag"
-            echo "docker tag $line harbor.baiinfo.com:20061/bigdata/$image_name_tag"
+            new_image="harbor.baiinfo.com:20061/bigdata/$name_space_prefix$image_name_tag"
+            echo "docker tag sssssssssssssssssssss"
             #docker tag $REGISTRY_URL/$NAME_SPACE/$name_space_prefix$image_name_tag
-            docker tag $line harbor.baiinfo.com:20061/bigdata/$image_name_tag
-            echo "docker push harbor.baiinfo.com:20061/bigdata/$image_name_tag"
+            docker tag $image_name_tag harbor.baiinfo.com:20061/bigdata/$name_space_prefix$image_name_tag
+            echo "docker push oooooooooooooooooooooo"
             #docker push $new_image
             docker push harbor.baiinfo.com:20061/bigdata/$image_name_tag
             echo "开始清理磁盘空间"
