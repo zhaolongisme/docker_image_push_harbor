@@ -141,6 +141,7 @@ jobs:
             image_name_tag="${image_name_tag%%@*}"
             #new_image="$REGISTRY_URL/$NAME_SPACE/$platform_prefix$name_space_prefix$image_name_tag"
             new_image="harbor.baiinfo.com:20061/bigdata/$name_space_prefix$image_name_tag"
+            ping harbor.baiinfo.com
             echo "docker tag sssssssssssssssssssss"
             #docker tag $REGISTRY_URL/$NAME_SPACE/$name_space_prefix$image_name_tag
             docker tag $image_name_tag harbor.baiinfo.com:20061/bigdata/$name_space_prefix$image_name_tag
