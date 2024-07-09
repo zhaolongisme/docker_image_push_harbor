@@ -99,14 +99,14 @@ jobs:
             #ping harbor.baiinfo.com
             echo "docker tag sssssssssssssssssssss"
             #docker tag $REGISTRY_URL/$NAME_SPACE/$name_space_prefix$image_name_tag
-            docker tag hello-world harbor.baiinfo.com:20061/bigdata/hello-world
-            #docker tag nginx:1.27.0-perl harbor.baiinfo.com:20061/bigdata/nginx:1.27.0-perl
-            docker tag bitnami/openresty harbor.baiinfo.com:20061/bigdata/bitnami/openresty
+            docker tag hello-world harbor.baiinfo.com:20061/bigdata/$image_name_tag
+            #docker tag nginx:1.27.0-perl harbor.baiinfo.com:20061/bigdata/$image_name_tag
+            docker tag bitnami/openresty harbor.baiinfo.com:20061/bigdata/$image_name_tag
             echo "docker push oooooooooooooooooooooo"
             #docker push $new_image
-            docker push harbor.baiinfo.com:20061/bigdata/hello-world
-            #docker push harbor.baiinfo.com:20061/bigdata/nginx:1.27.0-perl
-            docker push harbor.baiinfo.com:20061/bigdata/bitnami/openresty
+            docker push harbor.baiinfo.com:20061/bigdata/$image_name_tag
+            #docker push harbor.baiinfo.com:20061/bigdata/$image_name_tag
+            docker push harbor.baiinfo.com:20061/bigdata/$image_name_tag
             echo "开始清理磁盘空间"
             echo "=============================================================================="
             df -hT
