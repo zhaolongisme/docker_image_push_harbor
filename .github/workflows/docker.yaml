@@ -58,7 +58,6 @@ jobs:
 
     - name: Build and push image Aliyun
       run: |
-        mkdir -p /etc/docker/certs.d/111.202.106.163:20061
         docker login -u $REGISTRY_USER -p $REGISTRY_PASSWORD $REGISTRY_URL 
         # 数据预处理,判断镜像是否重名
         declare -A duplicate_images
