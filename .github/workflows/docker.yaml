@@ -99,9 +99,9 @@ jobs:
             #ping harbor.baiinfo.com
             echo "docker tag sssssssssssssssssssss"
             #docker tag $REGISTRY_URL/$NAME_SPACE/$name_space_prefix$image_name_tag
-            docker tag hello-world harbor.baiinfo.com:20061/bigdata/$image_name_tag
-            #docker tag nginx:1.27.0-perl harbor.baiinfo.com:20061/bigdata/$image_name_tag
-            docker tag bitnami/openresty harbor.baiinfo.com:20061/bigdata/$image_name_tag
+            docker tag $image_name_tag harbor.baiinfo.com:20061/bigdata/$image_name_tag
+            #docker tag $image_name_tag harbor.baiinfo.com:20061/bigdata/$image_name_tag
+            docker tag $image_name_tag harbor.baiinfo.com:20061/bigdata/$image_name_tag
             echo "docker push oooooooooooooooooooooo"
             #docker push $new_image
             docker push harbor.baiinfo.com:20061/bigdata/$image_name_tag
