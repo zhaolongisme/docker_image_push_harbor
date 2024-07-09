@@ -1,3 +1,3 @@
-hello-world:latest
-nginx:1.27.0-perl
-bitnami/openresty:latest
+hello-world
+nginx
+bitnami/openresty
