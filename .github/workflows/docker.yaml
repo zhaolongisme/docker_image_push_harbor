@@ -141,12 +141,12 @@ jobs:
             image_name_tag="${image_name_tag%%@*}"
             #new_image="$REGISTRY_URL/$NAME_SPACE/$platform_prefix$name_space_prefix$image_name_tag"
             #new_image="$REGISTRY_URL/$NAME_SPACE/$platform_prefix$image_name_tag"
-            echo "docker tag $line $image_name_tag"
+            echo "docker tag $line harbor.baiinfo.com:20061/bigdata/$image_name_tag"
             #docker tag $REGISTRY_URL/$NAME_SPACE/$name_space_prefix$image_name_tag
-            docker tag $line $REGISTRY_URL/$NAME_SPACE/$image_name_tag
-            echo "docker push $image_name_tag"
+            docker tag $line harbor.baiinfo.com:20061/bigdata/$image_name_tag
+            echo "docker push harbor.baiinfo.com:20061/bigdata/$image_name_tag"
             #docker push $new_image
-            docker push $REGISTRY_URL/$NAME_SPACE/$image_name_tag
+            docker push harbor.baiinfo.com:20061/bigdata/$image_name_tag
             echo "开始清理磁盘空间"
             echo "=============================================================================="
             df -hT
