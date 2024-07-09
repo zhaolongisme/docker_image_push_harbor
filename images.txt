@@ -1,3 +1,2 @@
 alpine
 hello-world
-nginx:1.25.3
